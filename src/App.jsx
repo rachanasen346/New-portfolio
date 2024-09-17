@@ -5,7 +5,7 @@ import Footer from './components/Footer';
 import { HomePage, About, Projects, Contact } from './pages';
 import ProjectGallery from './pages/projectGallery';
 import Resume from './pages/Resume';
-import Skills from './pages/Skills';
+import { Skills, Education, Work} from './pages';
 
 const App = () => {
   return (
@@ -31,10 +31,10 @@ const App = () => {
                   <Skills />
                 </Element>
                 <Element name="education">
-                  <Skills />
+                  <Education />
                 </Element>
                 <Element name="work">
-                  <Skills />
+                  <Work />
                 </Element>
                 <Element name="experience">
                   <Projects />

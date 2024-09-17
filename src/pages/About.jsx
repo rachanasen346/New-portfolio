@@ -2,110 +2,66 @@ import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timel
 import 'react-vertical-timeline-component/style.min.css';
 
 import CTA from "../components/CTA";
-import { experiences, skills } from "../constants";
+
+import portfolioImage from '../assets/images/wpp.jpeg';
 
 const About = () => {
   return (
-    <section className='max-container '>
-      <h1 className='head-text'>
-        Hello, I'm{" "}
-        <span className='blue-gradient_text font-semibold drop-shadow'>
-          {" "}
-          Rachana 
-        </span>{" "}
-        👋
-      </h1>
-
-      <div className='mt-5 flex flex-col gap-3 text-slate-500'>
-        <p>
-          Software Engineer based in Indore, specializing in technical
-          education through hands-on learning and building applications.
-        </p>
-      </div>
-
-      <div className='py-10 flex flex-col'>
-        <h3 className='subhead-text'>My Skills</h3>
-
-        <div className='mt-16 flex flex-wrap gap-12'>
-          {skills.map((skill) => (
-            <div className='block-container w-20 h-20' key={skill.name}>
-              <div className='btn-back rounded-xl' />
-              <div className='btn-front rounded-xl flex justify-center items-center'>
-                <img
-                  src={skill.imageUrl}
-                  alt={skill.name}
-                  className='w-1/2 h-1/2 object-contain'
-                />
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      <div className='py-16'>
-        <h3 className='subhead-text'>Work Experience.</h3>
-        <div className='mt-5 flex flex-col gap-3 text-slate-500'>
-          <p>
-            I've worked with all sorts of companies, leveling up my skills and
-            teaming up with smart people. Here's the rundown:
+    <section className="py-16">
+    <section className="max-container bg-gradient-to-r from-blue-200 to-purple-200 py-20 relative">
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-400 to-purple-600 opacity-40 pointer-events-none"></div>
+      
+      <div className="mx-auto flex flex-col md:flex-row items-center gap-12 px-8 relative">
+        {/* Left Section - About Content */}
+        <div className="md:w-2/3">
+          <h1 className="text-4xl font-bold text-gray-800 mb-6">
+            <span className="blue-gradient_text font-semibold">About Me</span> 👋
+          </h1>
+  
+          <p className="text-lg text-slate-600 mb-4">
+            I'm a passionate Software Engineer based in Indore, specializing in building interactive web applications using modern technologies. With over 1.7 years of experience in the field, I thrive on creating solutions that blend technical innovation and design excellence.
           </p>
+  
+          <p className="text-lg text-slate-600 mb-4">
+            My journey started with iOS development, but my focus quickly expanded to full-stack web development. Now, I build intuitive interfaces with React, manage back-end logic with Node.js, and store data efficiently using MongoDB.
+          </p>
+  
+          <p className="text-lg text-slate-600 mb-4">
+            I’m always eager to learn new technologies, collaborate with talented teams, and develop scalable, impactful solutions.
+          </p>
+  
+          {/* Call-to-Action */}
+          <div className="mt-6">
+            <a
+              href="#"
+              className="bg-blue-500 text-white py-3 px-8 rounded-lg shadow-lg transition duration-300 hover:bg-blue-600"
+            >
+              Contact Me
+            </a>
+          </div>
         </div>
-
-        <div className='mt-12 flex'>
-          <VerticalTimeline>
-            {experiences.map((experience, index) => (
-              <VerticalTimelineElement
-                key={experience.company_name}
-                date={experience.date}
-                // iconStyle={{ background: experience.iconBg }}
-                icon={
-                  <div className='flex justify-center items-center w-full h-full'>
-                    <img
-                      src={experience.icon}
-                      alt={experience.company_name}
-                      className='w-[60%] h-[60%] object-contain'
-                    />
-                  </div>
-                }
-                contentStyle={{
-                  borderBottom: "8px",
-                  borderStyle: "solid",
-                  borderBottomColor: experience.iconBg,
-                  boxShadow: "none",
-                }}
-              >
-                <div>
-                  <h3 className='text-black text-xl font-poppins font-semibold'>
-                    {experience.title}
-                  </h3>
-                  <p
-                    className='text-black-500 font-medium text-base'
-                    style={{ margin: 0 }}
-                  >
-                    {experience.company_name}
-                  </p>
-                </div>
-
-                <ul className='my-5 list-disc ml-5 space-y-2'>
-                  {experience.points.map((point, index) => (
-                    <li
-                      key={`experience-point-${index}`}
-                      className='text-black-500/50 font-normal pl-1 text-sm'
-                    >
-                      {point}
-                    </li>
-                  ))}
-                </ul>
-              </VerticalTimelineElement>
-            ))}
-          </VerticalTimeline>
+  
+        {/* Right Section - Optional Image */}
+        <div className="md:w-1/3 flex justify-center relative">
+          <div className="w-64 h-64 relative rounded-full overflow-hidden shadow-lg">
+            <img
+              src={portfolioImage}
+              alt="Profile"
+              className="w-full h-full object-cover"
+            />
+            {/* Removed the gradient overlay on the image */}
+          </div>
         </div>
       </div>
-
-      <hr className='border-slate-200' />
-
-      <CTA />
     </section>
+  </section>
+  
+     
+    
+
+
+  
+
   );
 };
 

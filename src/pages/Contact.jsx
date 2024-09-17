@@ -69,7 +69,7 @@ const Contact = () => {
   return (
 
 <>
-<section className="min-h-screen flex flex-col justify-center items-center pt-12 pb-20 bg-white">
+<section className="min-h-screen flex flex-col justify-center items-center pt-12 pb-20 bg-white ">
     
 
       {/* Hero Section */}

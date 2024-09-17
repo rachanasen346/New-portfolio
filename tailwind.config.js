@@ -24,7 +24,21 @@ export default {
       },
       boxShadow: {
         card: '0px 1px 2px 0px rgba(0, 0, 0, 0.05)'
-      }
+      },
+
+      keyframes: {
+        typing: {
+          '0%': { width: '0%' },
+          '100%': { width: '100%' },
+        },
+        blink: {
+          '50%': { borderColor: 'transparent' },
+        },
+      },
+      animation: {
+        typing: 'typing 4s steps(40, end) forwards',
+        blink: 'blink 1s step-end infinite',
+      },
     },
   },
   plugins: [],
