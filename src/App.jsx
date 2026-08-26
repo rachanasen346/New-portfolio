@@ -2,10 +2,9 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Element } from 'react-scroll';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-import { HomePage, About, Projects, Contact } from './pages';
-import ProjectGallery from './pages/projectGallery';
+import { HomePage, About, Projects, Contact, Experience } from './pages';
 import Resume from './pages/Resume';
-import { Skills, Education, Work} from './pages';
+import { Skills} from './pages';
 
 const App = () => {
   return (
@@ -27,16 +26,13 @@ const App = () => {
                 <Element name="about">
                   <About />
                 </Element>
+                <Element name="experience">
+                  <Experience />
+                </Element>
                 <Element name="skills">
                   <Skills />
                 </Element>
-                <Element name="education">
-                  <Education />
-                </Element>
-                <Element name="work">
-                  <Work />
-                </Element>
-                <Element name="experience">
+                <Element name="projects">
                   <Projects />
                 </Element>
                 <Element name="contact">
@@ -46,10 +42,6 @@ const App = () => {
             }
           />
           {/* Other routes */}
-          <Route
-            path="/project-gallery"
-            element={<ProjectGallery />}
-          />
           <Route
             path="/resume"
             element={<Resume />}
