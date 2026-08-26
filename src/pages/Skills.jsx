@@ -1,21 +1,19 @@
-// components/Skills.jsx
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { skills } from '../constants';
 
-// Import icons here
 import { FaPython, FaJs, FaReact, FaHtml5, FaCss3Alt, FaDatabase, FaGitAlt } from 'react-icons/fa';
 // import { SiCplusplus, SiMicrosoft } from 'react-icons/si';
 import { MdOutlineComputer } from 'react-icons/md';
 import { TbBinaryTree } from 'react-icons/tb';
-import { FaFileExcel } from 'react-icons/fa';
-// Icon mapper helper
+
 const renderSkillIcon = (iconName, color) => {
   const iconProps = { className: "text-4xl", style: { color } };
   
   switch (iconName) {
     case 'python': return <FaPython {...iconProps} />;
     case 'javascript': return <FaJs {...iconProps} />;
-    // case 'cplusplus': return <SiCplusplus {...iconProps} />;
+    //case 'cplusplus': return <SiCplusplus {...iconProps} />;
     case 'database': 
     case 'dbdesign': return <FaDatabase {...iconProps} />;
     case 'git': return <FaGitAlt {...iconProps} />;
@@ -24,7 +22,7 @@ const renderSkillIcon = (iconName, color) => {
     case 'react': return <FaReact {...iconProps} />;
     case 'computer': return <MdOutlineComputer {...iconProps} />;
     case 'dsa': return <TbBinaryTree {...iconProps} />;
-    // case 'msoffice': return <FaFileExcel {...iconProps} style={{ color: '#107C41' }} />;
+   // case 'msoffice': return <SiMicrosoft {...iconProps} />;
     default: return <FaDatabase {...iconProps} />;
   }
 };
@@ -56,7 +54,7 @@ const Skills = () => {
             Technical &amp; Pedagogical Skills
           </h2>
           <p className="text-gray-600 text-base">
-            Core programming languages, database architectures, and instructional domains.
+            Click on any module to view the detailed curriculum, teaching approach, and interactive quizzes.
           </p>
         </div>
 
@@ -77,23 +75,27 @@ const Skills = () => {
           ))}
         </div>
 
-        {/* Skills Cards */}
+        {/* Clickable Skills Grid */}
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
           {filteredSkills.map((skill) => (
-            <div
+            <Link
+              to={`/curriculum/${skill.iconName}`}
               key={skill.name}
-              className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all duration-200 flex flex-col items-center justify-center hover:-translate-y-1"
+              className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all duration-200 flex flex-col items-center justify-center hover:-translate-y-1 cursor-pointer group"
             >
-              <div className="w-14 h-14 mb-4 flex items-center justify-center bg-slate-50 rounded-xl p-2.5">
+              <div className="w-14 h-14 mb-4 flex items-center justify-center bg-slate-50 rounded-xl p-2.5 group-hover:bg-blue-50 transition-colors">
                 {renderSkillIcon(skill.iconName, skill.color)}
               </div>
-              <h4 className="text-center text-sm font-semibold text-gray-800">
+              <h4 className="text-center text-sm font-semibold text-gray-800 group-hover:text-blue-600 transition-colors">
                 {skill.name}
               </h4>
               <span className="text-[11px] text-gray-400 mt-1 font-medium text-center">
                 {skill.level}
               </span>
-            </div>
+              <span className="text-[11px] text-blue-500 font-semibold mt-2 group-hover:underline">
+                View Curriculum →
+              </span>
+            </Link>
           ))}
         </div>
 

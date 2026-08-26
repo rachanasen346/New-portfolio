@@ -4,7 +4,8 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import { HomePage, About, Projects, Contact, Experience } from './pages';
 import Resume from './pages/Resume';
-import { Skills} from './pages';
+import CurriculumDetail from './pages/CurriculumDetail';
+import { Skills } from './pages';
 
 const App = () => {
   return (
@@ -46,6 +47,8 @@ const App = () => {
             path="/resume"
             element={<Resume />}
           />
+          <Route path="/curriculum/:skillId" element={<CurriculumDetail />} />
+
         </Routes>
 
         <Footer />

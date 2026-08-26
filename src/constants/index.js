@@ -139,7 +139,7 @@ export const experiences = [
     type: "teaching",
     tag: "Instruction & Mentorship",
     iconBg: "#2563EB",
-    date: "August 2025 – Present",
+    date: "9 April 2026 – Present",
     points: [
       "Deliver classroom lectures and practical lab sessions on Computer Fundamentals, MS Office, and Python Programming.",
       "Design hands-on coding assignments and conduct continuous technical assessments to evaluate student learning outcomes.",
