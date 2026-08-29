@@ -84,7 +84,7 @@ const HomePage = () => {
       </section>
 
       {/* Animation Styles */}
-      <style jsx>{`
+      <style>{`
         @keyframes floating {
           0% {
             transform: translateY(0) scale(1);
