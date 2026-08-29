@@ -4,10 +4,10 @@ const Resume = () => {
   return (
     <div className="resume-container">
       <iframe
-        src="/rachana.pdf.pdf"
+        src="/RachanaSenResume.pdf"
         width="100%"
         height="1000px"
-        title="Resume"
+        title="Rachana sen Resume"
       />
 
       

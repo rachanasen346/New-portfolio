@@ -73,7 +73,7 @@ const HomePage = () => {
           </Link>
 
           <a
-            href="/Rachana_Sen_Resume.pdf"
+            href="/RachanaSenResume.pdf"
             download
             className="bg-white text-gray-800 border border-gray-300 py-3.5 px-8 rounded-full shadow-sm hover:bg-gray-50 transition duration-300 inline-flex items-center justify-center font-medium"
           >

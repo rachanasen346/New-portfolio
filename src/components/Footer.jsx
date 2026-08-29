@@ -10,7 +10,7 @@ const Footer = () => {
         <div>
           <h3 className="text-lg font-semibold mb-4">About Me</h3>
           <p className="text-sm text-gray-100">
-            I’m Rachana Sen, a passionate software engineer from Indore, creating beautiful web experiences with a focus on clean design and code.
+            Dedicated Computer Science Educator & Technical Trainer passionate about simplifying core computer science, Python programming, and modern web development through hands-on learning.
           </p>
         </div>
 
@@ -18,9 +18,9 @@ const Footer = () => {
         <div>
           <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
           <ul className="text-sm space-y-2">
-            <li><Link to="/about" className="hover:text-gray-300">About</Link></li>
-            <li><Link to="/projects" className="hover:text-gray-300">Projects</Link></li>
-            <li><Link to="/contact" className="hover:text-gray-300">Contact</Link></li>
+            <li><Link to="" className="hover:text-gray-300">About</Link></li>
+            <li><Link to="" className="hover:text-gray-300">Projects</Link></li>
+            <li><Link to="" className="hover:text-gray-300">Contact</Link></li>
           </ul>
         </div>
 

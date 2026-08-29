@@ -72,7 +72,7 @@ const Navbar = () => {
           {/* Desktop Right CTA / Socials */}
           <div className="hidden md:flex items-center space-x-4">
             <a
-              href="/Rachana_Sen_Resume.pdf"
+              href="/RachanaSenResume.pdf"
               download
               className="bg-white text-blue-600 text-xs font-semibold px-4 py-2 rounded-full hover:bg-blue-50 transition shadow-sm"
             >
@@ -167,10 +167,10 @@ const Navbar = () => {
           >
             Download Resume
           </a>
-
+{/* https://linkedin.com */}
           <div className="flex justify-center space-x-6 text-gray-400">
             <a
-              href="https://linkedin.com"
+              href=""
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-white transition"
